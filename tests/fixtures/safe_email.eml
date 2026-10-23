@@ -1,0 +1,7 @@
+From: Alice <alice@example.com>
+To: wes@example.com
+Subject: Lunch
+Authentication-Results: mx.example.com; spf=pass; dkim=pass; dmarc=pass
+Content-Type: text/plain
+
+Lunch tomorrow?

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skunk"
+version = "0.1.0"
+description = "Standalone desktop phishing email analyzer"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["beautifulsoup4", "keyring", "rapidfuzz"]
+
+[project.scripts]
+skunk = "skunk.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+skunk = ["data/*.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100

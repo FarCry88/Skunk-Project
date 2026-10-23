@@ -1,0 +1,8 @@
+From: "PayPal Support" <support@paypa1-security.com>
+Reply-To: help@gmail.com
+To: wes@example.com
+Subject: Urgent: verify your account
+Authentication-Results: mx.example.com; spf=fail; dkim=none; dmarc=fail
+Content-Type: text/plain
+
+Click here now to keep your account.

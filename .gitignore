@@ -1,0 +1,16 @@
+#Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+#Secrets and local data - never commit these
+.env
+config.local.*
+*.db
+*.sqlite3
