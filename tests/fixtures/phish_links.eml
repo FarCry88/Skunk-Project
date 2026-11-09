@@ -1,0 +1,11 @@
+From: Alice <alice@example.com>
+To: wes@example.com
+Subject: Your invoice
+Authentication-Results: mx.example.com; spf=pass; dkim=pass; dmarc=pass
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+
+<html><body>
+<p>Please review: <a href="http://paypa1-security.com/login">www.paypal.com</a></p>
+<p>Also see <a href="http://192.168.4.7/pay">this link</a> or http://bit.ly/abc123</p>
+</body></html>

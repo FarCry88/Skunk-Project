@@ -1,6 +1,7 @@
 from skunk.analyzers.headers import check_headers
+from skunk.analyzers.urls import check_urls
 from skunk.models import Finding, Verdict
-from skunk.parser import parse_eml
+from skunk.parser import get_bodies, parse_eml
 
 
 def build_verdict(findings: list[Finding]) -> Verdict:
@@ -16,4 +17,6 @@ def build_verdict(findings: list[Finding]) -> Verdict:
 
 def analyze_file(path) -> Verdict:
     msg = parse_eml(path)
-    return build_verdict(check_headers(msg))
+    text, html = get_bodies(msg)
+    findings = check_headers(msg) + check_urls(text, html)
+    return build_verdict(findings)
